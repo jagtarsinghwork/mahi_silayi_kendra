@@ -13,7 +13,7 @@ import Footer from '@/components/common/Footer';
 export const metadata: Metadata = {
   title: 'TESTFIRE DEV',
   description:
-    'Unlock your full potential as a digital creator. Early Caves is the premier all-in-one platform meticulously designed for experts and entrepreneurs across diverse niches—including finance, education, fitness, lifestyle, and business. We empower you to effortlessly monetize your unique knowledge, cultivate vibrant communities, and accelerate the growth of your online enterprise',
+    'Unlock your potential as an app developer with TestFire! The ultimate platform (platform - मंच) for developers, companies, and freelancers to test and launch apps on Play Store. Easily submit apps, connect with real-world testers, and grow your app business (business - व्यवसाय) with our all-in-one solution.',
 };
 
 
@@ -59,7 +59,7 @@ export default function RootLayout({
 // export const metadata: Metadata = {
 //   title: 'TESTFIRE DEV',
 //   description:
-//     'Unlock your full potential as a digital creator. Early Caves is the premier all-in-one platform meticulously designed for experts and entrepreneurs across diverse niches—including finance, education, fitness, lifestyle, and business. We empower you to effortlessly monetize your unique knowledge, cultivate vibrant communities, and accelerate the growth of your online enterprise',
+//     'Unlock your potential as an app developer with TestFire! The ultimate platform (platform - मंच) for developers, companies, and freelancers to test and launch apps on Play Store. Easily submit apps, connect with real-world testers, and grow your app business (business - व्यवसाय) with our all-in-one solution.',
 // };
 
 // export default async function RootLayout({
