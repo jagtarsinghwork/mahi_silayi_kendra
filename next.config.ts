@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const {
   NEXT_PUBLIC_API_BASE_URL,
@@ -11,24 +11,21 @@ const {
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   sassOptions: {
-    includePaths: ['./sass'],
+    includePaths: ["./sass"],
   },
   images: {
     unoptimized: true, // Optional for now
-    // remotePatterns: [
-    //   { protocol: 'https', hostname: 'testfire.dev', pathname: '/**' },
-    //   { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
-    // ],
+
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'testfire.dev',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "delhi365.in",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
       },
     ],
   },

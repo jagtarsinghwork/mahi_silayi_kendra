@@ -1,9 +1,8 @@
-'use client';
-import { createContext, ReactNode, useEffect, useState } from 'react';
-import { getUserRequest } from '@/api/auth';
-import { User } from '@/types/auth';
-import { useRouter } from 'next/navigation';
-
+"use client";
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { getUserRequest } from "@/api/auth";
+import { User } from "@/types/auth";
+import { useRouter } from "next/navigation";
 
 export type AuthContextType = {
   token: string | null;
@@ -14,13 +13,11 @@ export type AuthContextType = {
   isAuthenticating: boolean;
 };
 
-
-
 export const AuthContext = createContext<Partial<AuthContextType>>({});
 
 const AuthProvider = ({ children }: { children: Readonly<ReactNode> }) => {
   const router = useRouter();
-  
+
   const [token, setToken] = useState<string | null>(null);
   const [session, setSession] = useState<User | null>(null);
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -28,8 +25,8 @@ const AuthProvider = ({ children }: { children: Readonly<ReactNode> }) => {
 
   // Login function for custom JWT
   const login = (newToken: string, user: User) => {
-    console.log('User Auth:', user);
-    localStorage.setItem('token', newToken);
+    console.log("User Auth:", user);
+    localStorage.setItem("token", newToken);
     router.push("/dashboard");
     setToken(newToken);
     setSession(user);
@@ -38,8 +35,8 @@ const AuthProvider = ({ children }: { children: Readonly<ReactNode> }) => {
 
   // Logout function
   const logout = () => {
-    localStorage.removeItem('token');
-    document.cookie = 'token=; path=/; max-age=0'; // Clear cookie
+    localStorage.removeItem("token");
+    document.cookie = "token=; path=/; max-age=0"; // Clear cookie
     setToken(null);
     setSession(null);
     setAuthenticated(false);
@@ -50,19 +47,19 @@ const AuthProvider = ({ children }: { children: Readonly<ReactNode> }) => {
     try {
       setAuthenticating(true);
       // const savedToken = localStorage.getItem('token');
-      const tokenCookies = (document.cookie.match(/token=([^;]+)/)?.[1]);
-      console.log("tokenCookies",tokenCookies);
-      const savedToken = localStorage.getItem('token') || tokenCookies
-      
+      const tokenCookies = document.cookie.match(/token=([^;]+)/)?.[1];
+      console.log("tokenCookies", tokenCookies);
+      const savedToken = localStorage.getItem("token") || tokenCookies;
+
       if (savedToken) {
         const res = await getUserRequest();
-        console.log("res-->",res.data.data);
+        console.log("res-->", res.data.data);
         setSession(res?.data.data);
         setToken(savedToken);
         setAuthenticated(true);
       }
     } catch (error) {
-      console.log('Error:', error);
+      console.log("Error:", error);
       logout(); // Clear state on error
     } finally {
       setAuthenticating(false);

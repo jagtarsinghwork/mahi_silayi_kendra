@@ -8,9 +8,9 @@ import "./globals.css";
 import "../sass/styles.scss";
 
 export const metadata: Metadata = {
-  title: "TESTFIRE DEV",
+  title: "DELHI-365",
   description:
-    "Unlock your potential as an app developer with TestFire! The ultimate platform (platform - मंच) for developers, companies, and freelancers to test and launch apps on Play Store. Easily submit apps, connect with real-world testers, and grow your app business (business - व्यवसाय) with our all-in-one solution.",
+    "Unlock your potential as an app developer with delhi 365! The ultimate platform (platform - मंच) for developers, companies, and freelancers to test and launch apps on Play Store. Easily submit apps, connect with real-world testers, and grow your app business (business - व्यवसाय) with our all-in-one solution.",
 };
 
 export default function RootLayout({
