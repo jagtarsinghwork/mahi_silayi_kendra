@@ -6,22 +6,7 @@ const { Readable } = require("stream");
 const baseUrl = "https://delhi365.in";
 
 (async () => {
-  const pages = [
-    "", // homepage
-    "sign-up",
-    "sign-in",
-    "book-demo",
-    "privacy-policy",
-    "refund-policy",
-    "terms-policy",
-    "purchase/payment-product",
-    "dashboard/payout",
-    "blog",
-    "pricing",
-    "docs",
-    "features",
-    "community",
-  ];
+  const pages = ["", "app"];
 
   const links = pages.map((page) => ({
     url: `/${page}`,
