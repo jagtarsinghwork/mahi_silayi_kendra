@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import APILayout from "@/components/Layouts/APILayout";
-import { Toaster } from "@/components/ui/sonner";
-import AuthProvider from "@/context/AuthContext";
-import ReactQueryProvider from "./ReactQueryProvider";
+
 import "./globals.css";
 import "../sass/styles.scss";
 
@@ -20,16 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
-        <ReactQueryProvider>
-          <AuthProvider>
-            <APILayout>{children}</APILayout>
-            {process.env.NODE_ENV === "development" && (
-              <ReactQueryDevtools initialIsOpen={false} />
-            )}
-          </AuthProvider>
-        </ReactQueryProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

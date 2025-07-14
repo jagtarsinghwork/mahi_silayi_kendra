@@ -1,34 +1,28 @@
-const fs = require('fs');
-const path = require('path');
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { Readable } = require('stream');
+const fs = require("fs/promises");
+const path = require("path");
 
-const baseUrl = 'https://delhi365.in';
+// Configuration
+const SITE_URL = "https://delhi365.in";
+const OUTPUT_FILE = path.join(process.cwd(), "public", "sitemap.xml");
 
-(async () => {
-  const pages = ['', 'app'];
+async function generateSitemap() {
+  try {
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${SITE_URL}/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
 
-  const links = pages.map((page) => ({
-    url: `/${page}`,
-    changefreq: 'monthly',
-    priority: 0.8,
-  }));
-
-  const stream = new SitemapStream({ hostname: baseUrl });
-  const xml = await streamToPromise(Readable.from(links).pipe(stream)).then(
-    (data) => data.toString(),
-  );
-
-  // Create out directory if it doesn't exist
-  const outDir = path.join(process.cwd(), 'out');
-  if (!fs.existsSync(outDir)) {
-    fs.mkdirSync(outDir, { recursive: true });
+    await fs.writeFile(OUTPUT_FILE, sitemapContent);
+    console.log(`Sitemap generated at: ${OUTPUT_FILE}`);
+  } catch (error) {
+    console.error("Error generating sitemap:", error);
+    process.exit(1);
   }
+}
 
-  // Write sitemap file
-  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), xml);
-  console.log(
-    'Sitemap generated successfully at:',
-    path.join(outDir, 'sitemap.xml'),
-  );
-})();
+generateSitemap();
