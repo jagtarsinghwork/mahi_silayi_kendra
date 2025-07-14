@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { Roboto } from "next/font/google";
-import Dashboard from "@/app/dashboard/page";
+// import Dashboard from "@/app/dashboard/page";
 import { Inter } from 'next/font/google';
 // import "quill/dist/quill.core.css";
 

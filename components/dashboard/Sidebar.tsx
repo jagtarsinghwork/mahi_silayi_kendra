@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { LayoutDashboard, Smartphone, BarChart2, CreditCard, Users, Settings, HelpCircle, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { AuthContext } from '@/context/AuthContext';
+// import { AuthContext } from '@/context/AuthContext';
 import { toast } from 'sonner';
 
 const sidebarItems = [
@@ -53,7 +53,7 @@ const sidebarItems = [
 export function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
-  const { logout } = useContext(AuthContext);
+  // const { logout } = useContext(AuthContext);
 
   // const handleSignOut = () => {
   //   logout();
@@ -62,14 +62,14 @@ export function Sidebar() {
   // };
 
   const handleSignOut = () => {
-    if (!logout) {
-      // Fallback behavior
-      localStorage.removeItem('token');
-      router.push('/signin');
-      return;
-    }
+    // if (!logout) {
+    //   // Fallback behavior
+    //   localStorage.removeItem('token');
+    //   router.push('/signin');
+    //   return;
+    // }
     
-    logout();
+    // logout();
     document.cookie = 'token=; path=/; max-age=0'; // Clear cookie
     toast.success('Logged out successfully!');
     router.push('/signin');
