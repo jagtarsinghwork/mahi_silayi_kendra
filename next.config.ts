@@ -13,6 +13,7 @@ const {
 } = process.env;
 
 const nextConfig: NextConfig = {
+  output: 'export',
   productionBrowserSourceMaps: false,
   sassOptions: {
     includePaths: ['./sass'],
