@@ -1,9 +1,9 @@
-"use client"
-import React from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Home, AlertCircle } from "lucide-react";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Home, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function NotFoundPage() {
   return (
@@ -18,7 +18,8 @@ export default function NotFoundPage() {
               Page Not Found
             </h1>
             <p className="text-gray-400 mb-6">
-              Sorry, the page you’re looking for doesn’t exist. Return to the dashboard or contact support for assistance.
+              Sorry, the page you’re looking for doesn’t exist. Return to the
+              dashboard or contact support for assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/dashboard">
