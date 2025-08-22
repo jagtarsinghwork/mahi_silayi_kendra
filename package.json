@@ -1,5 +1,5 @@
 {
-  "name": "delhi365-wweb",
+  "name": "Mahi-Silayi-Kendra",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,18 +15,23 @@
     "@tanstack/react-query": "^5.81.5",
     "@tanstack/react-query-devtools": "^5.81.5",
     "axios": "^1.7.7",
+    "i18next": "^25.3.6",
     "lucide-react": "^0.525.0",
     "next": "^15.1.6",
     "next-auth": "^4.24.10",
+    "next-i18next": "^15.4.2",
+    "next-intl": "^4.3.5",
     "next-themes": "^0.4.6",
     "prism-react-renderer": "^2.4.1",
     "razorpay": "^2.9.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.6.1",
     "sass": "^1.89.2",
     "sitemap": "^8.0.0",
     "sonner": "^2.0.5",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "upiqr": "^1.3.22"
   },
   "devDependencies": {
     "@types/cookie": "^0.6.0",

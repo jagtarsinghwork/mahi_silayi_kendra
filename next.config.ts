@@ -1,4 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+const withNextIntl = createNextIntlPlugin();
+
+// const { i18n } = require('./next-i18next.config');
 
 const {
   NEXT_PUBLIC_API_BASE_URL,
@@ -11,21 +15,21 @@ const {
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   sassOptions: {
-    includePaths: ["./sass"],
+    includePaths: ['./sass'],
   },
   images: {
     unoptimized: true, // Optional for now
 
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "delhi365.in",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'sapprowcourier.in',
+        pathname: '/**',
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
       },
     ],
   },
@@ -36,6 +40,10 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_QUARTER_DAYS,
     NEXT_PUBLIC_YEAR_DAYS,
   },
+  // i18n: i18n,
+  // experimental: {
+  //   serverComponentsExternalPackages: ['next-i18next'], // Allow next-i18next in server components
+  // },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -26,7 +26,11 @@ export default function AppSubmissionFormPage() {
     companyWebsite: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -44,9 +48,13 @@ export default function AppSubmissionFormPage() {
           Submit Your App & Create Profile
         </h1>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg">
-          Get started with TestFire by submitting your app details and creating your company or individual profile.
+          Get started with TestFire by submitting your app details and creating
+          your company or individual profile.
         </p>
-        <form onSubmit={handleSubmit} className="bg-gray-800 rounded-xl p-6 shadow-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-gray-800 rounded-xl p-6 shadow-lg"
+        >
           {/* App Submission Section */}
           <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             App Submission
@@ -67,10 +75,15 @@ export default function AppSubmissionFormPage() {
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.1s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.1s' }}
+            >
               <Link2 className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
-                <label className="block text-gray-400 mb-2">Play Store Link</label>
+                <label className="block text-gray-400 mb-2">
+                  Play Store Link
+                </label>
                 <input
                   type="url"
                   name="playStoreLink"
@@ -82,10 +95,15 @@ export default function AppSubmissionFormPage() {
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.2s' }}
+            >
               <FileText className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
-                <label className="block text-gray-400 mb-2">App Description</label>
+                <label className="block text-gray-400 mb-2">
+                  App Description
+                </label>
                 <textarea
                   name="appDescription"
                   value={formData.appDescription}
@@ -103,7 +121,10 @@ export default function AppSubmissionFormPage() {
             Profile Creation
           </h2>
           <div className="space-y-6">
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.3s' }}
+            >
               <User className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
                 <label className="block text-gray-400 mb-2">Name</label>
@@ -118,7 +139,10 @@ export default function AppSubmissionFormPage() {
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.4s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.4s' }}
+            >
               <Mail className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
                 <label className="block text-gray-400 mb-2">Email</label>
@@ -133,7 +157,10 @@ export default function AppSubmissionFormPage() {
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.5s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.5s' }}
+            >
               <Building className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
                 <label className="block text-gray-400 mb-2">User Type</label>
@@ -148,10 +175,15 @@ export default function AppSubmissionFormPage() {
                 </select>
               </div>
             </div>
-            <div className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]" style={{ animationDelay: '0.6s' }}>
+            <div
+              className="flex items-center space-x-4 animate-[fadeIn_0.5s_ease-in]"
+              style={{ animationDelay: '0.6s' }}
+            >
               <Globe className="w-6 h-6 text-blue-400" />
               <div className="flex-1">
-                <label className="block text-gray-400 mb-2">Company Website (Optional)</label>
+                <label className="block text-gray-400 mb-2">
+                  Company Website (Optional)
+                </label>
                 <input
                   type="url"
                   name="companyWebsite"
