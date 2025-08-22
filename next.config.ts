@@ -34,6 +34,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  trailingSlash: true, // Optional: for better compatibility with some static hosts
   env: {
     NEXT_PUBLIC_RAZORPAY_KEY,
     NEXT_PUBLIC_API_BASE_URL,

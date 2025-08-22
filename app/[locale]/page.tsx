@@ -3,6 +3,14 @@ import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import ClientHome from '../home/page';
 
+// Add this function to generate static params for all locales
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'hi' },
+    // Add more locales if you have them
+  ];
+}
 // Note: We need to make this an async function to use await
 export default async function Page({
   params,
