@@ -95,6 +95,7 @@ export default function Page() {
   // app/page.tsx
 
   redirect('/en'); // Redirect to default locale
+  return null;
 
   // return <></>;
 }

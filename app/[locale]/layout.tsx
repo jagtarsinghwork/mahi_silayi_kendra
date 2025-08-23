@@ -11,7 +11,6 @@ export function generateStaticParams() {
     // Add more locales if you have them
   ];
 }
-
 export default async function LocaleLayout({
   children,
   params,
