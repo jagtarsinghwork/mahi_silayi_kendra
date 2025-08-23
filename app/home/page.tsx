@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Logo from '@/components/common/Logo';
-// import upiqr from 'upiqr';
+import upiqr from 'upiqr';
 import { useTranslations } from 'next-intl';
 
 type Props = {
@@ -718,29 +718,29 @@ export default function ClientHome({ locale, imageData }: Props) {
     },
   ];
 
-  // const generateQr = async () => {
-  //   setLoading(true);
-  //   try {
-  //     const { qr, intent } = await upiqr({
-  //       payeeVPA: '8690833289@okbizaxis',
-  //       payeeName: 'Mahi Silai Kendra',
-  //       transactionNote: 'Purchase from Laddu Gopal Store',
-  //       amount: amount, // optional
-  //       currency: 'INR', // optional
-  //     });
-  //     setQrData(qr); // base64 image string
-  //     console.log('Intent:', intent);
-  //   } catch (err) {
-  //     console.error('QR generation failed:', err);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+  const generateQr = async () => {
+    setLoading(true);
+    try {
+      const { qr, intent } = await upiqr({
+        payeeVPA: '8690833289@okbizaxis',
+        payeeName: 'Mahi Silai Kendra',
+        transactionNote: 'Purchase from Laddu Gopal Store',
+        amount: amount, // optional
+        currency: 'INR', // optional
+      });
+      setQrData(qr); // base64 image string
+      console.log('Intent:', intent);
+    } catch (err) {
+      console.error('QR generation failed:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  // // Generate when modal opens
-  // if (showQR && !qrData && !loading) {
-  //   generateQr();
-  // }
+  // Generate when modal opens
+  if (showQR && !qrData && !loading) {
+    generateQr();
+  }
 
   // if (!showQR) return null;
 
