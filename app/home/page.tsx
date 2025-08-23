@@ -676,7 +676,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       isNew: true,
     },
     {
-      id: 51  
+      id: 51,
       name: 'Black Sequined Dress',
       price: 'Rs. 50',
       originalPrice: 'Rs. 100',
@@ -880,7 +880,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       rating: 4.8,
       reviews: 44,
       colors: ['Green', 'Olive'],
-      sizes: ['Small', 'Medium'], 
+      sizes: ['Small', 'Medium'],
       isNew: true,
     },
     {
@@ -950,11 +950,11 @@ export default function ClientHome({ locale, imageData }: Props) {
     },
     {
       id: 72,
-      name: 'Green Georgette Dress',    
+      name: 'Green Georgette Dress',
       price: 'Rs. 180',
       originalPrice: 'Rs. 200',
-      discount: '10% off',    
-      image: '/laddu_gopal_ji_23.jpeg', 
+      discount: '10% off',
+      image: '/laddu_gopal_ji_23.jpeg',
       rating: 4.8,
       reviews: 54,
       colors: ['Green', 'Olive'],
@@ -964,7 +964,7 @@ export default function ClientHome({ locale, imageData }: Props) {
     {
       id: 73,
       name: 'Red Cotton Dress',
-      price: 'Rs. 120', 
+      price: 'Rs. 120',
       originalPrice: 'Rs. 200',
       discount: '40% off',
       image: '/laddu_gopal_ji_24.jpeg',
@@ -976,7 +976,7 @@ export default function ClientHome({ locale, imageData }: Props) {
     },
     {
       id: 74,
-      name: 'White Embroidered Dress',      
+      name: 'White Embroidered Dress',
       price: 'Rs. 43',
       originalPrice: 'Rs. 100',
       discount: '57% off',
@@ -1009,7 +1009,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       image: '/laddu_gopal_ji_27.jpeg',
 
       rating: 4.3,
-      reviews: 38,  
+      reviews: 38,
       colors: ['Pink', 'Peach'],
       sizes: ['Small', 'Medium'],
       isNew: true,
@@ -1018,7 +1018,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       id: 77,
       name: 'Blue Satin Dress',
       price: 'Rs. 65',
-      originalPrice: 'Rs. 100', 
+      originalPrice: 'Rs. 100',
       discount: '35% off',
       image: '/laddu_gopal_ji_28.jpeg',
       rating: 4.6,
@@ -1061,7 +1061,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       discount: '20% off',
       image: '/laddu_gopal_ji_31.jpeg',
       rating: 4.9,
-      reviews: 52,  
+      reviews: 52,
       colors: ['White', 'Cream'],
       sizes: ['Small', 'Medium'],
       isNew: true,
@@ -1108,13 +1108,13 @@ export default function ClientHome({ locale, imageData }: Props) {
     {
       id: 84,
       name: 'Green Silk Dress',
-      price: 'Rs. 450', 
+      price: 'Rs. 450',
       originalPrice: 'Rs. 500',
       discount: '10% off',
       image: '/laddu_gopal_ji_35.jpeg',
       rating: 4.8,
       reviews: 62,
-      colors: ['Green', 'Olive'],   
+      colors: ['Green', 'Olive'],
       sizes: ['Small', 'Medium'],
       isNew: true,
     },
@@ -1123,7 +1123,7 @@ export default function ClientHome({ locale, imageData }: Props) {
       name: 'Red Net Dress',
       price: 'Rs. 275',
       originalPrice: 'Rs. 500',
-      discount: '45% off',    
+      discount: '45% off',
       image: '/laddu_gopal_ji_36.jpeg',
       rating: 4.7,
       reviews: 50,
@@ -1131,7 +1131,6 @@ export default function ClientHome({ locale, imageData }: Props) {
       sizes: ['Small', 'Medium', 'Large'],
       isNew: true,
     },
-
   ];
 
   const handleBuyNow = (product: any) => {
