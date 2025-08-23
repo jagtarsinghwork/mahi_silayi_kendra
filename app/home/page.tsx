@@ -662,19 +662,19 @@ export default function ClientHome({ locale, imageData }: Props) {
       sizes: ['Small', 'Medium', 'Large'],
       isNew: true,
     },
-    {
-      id: 50,
-      name: 'White Brocade Dress',
-      price: 'Rs. 899',
-      originalPrice: 'Rs. 1199',
-      discount: '25% off',
-      image: '/laddu_gopal_ji_50.jpeg',
-      rating: 4.9,
-      reviews: 42,
-      colors: ['White', 'Cream'],
-      sizes: ['Small', 'Medium'],
-      isNew: true,
-    },
+    // {
+    //   id: 50,
+    //   name: 'White Brocade Dress',
+    //   price: 'Rs. 899',
+    //   originalPrice: 'Rs. 1199',
+    //   discount: '25% off',
+    //   image: '/laddu_gopal_ji_50.jpeg',
+    //   rating: 4.9,
+    //   reviews: 42,
+    //   colors: ['White', 'Cream'],
+    //   sizes: ['Small', 'Medium'],
+    //   isNew: true,
+    // },
   ];
 
   const handleBuyNow = (product: any) => {
