@@ -1151,26 +1151,49 @@ export default function ClientHome({ locale, imageData }: Props) {
   //   { name: 'Accessories', image: '/category4.jpg', icon: '👜' },
   // ];
 
+  // const categories = [
+  //   {
+  //     name: 'Festive Collection',
+  //     image: '/category1.jpg',
+  //     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23F59E0B' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='50' r='30' stroke='%23F59E0B' stroke-width='2' fill='none'/%3E%3Cpath d='M50 15L55 35H75L60 45L65 65L50 55L35 65L40 45L25 35H45L50 15Z' fill='%23C53030'/%3E%3C/svg%3E",
+  //   },
+  //   {
+  //     name: 'Daily Wear',
+  //     image: '/category2.jpg',
+  //     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 30L50 15L70 30V70H30V30Z' stroke='%234F46E5' stroke-width='4' fill='none'/%3E%3Crect x='35' y='40' width='30' height='20' rx='2' fill='%234F46E5' fill-opacity='0.2'/%3E%3Cline x1='40' y1='50' x2='60' y2='50' stroke='%234F46E5' stroke-width='2'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%234F46E5' stroke-width='2'/%3E%3C/svg%3E",
+  //   },
+  //   {
+  //     name: 'Premium Dresses',
+  //     image: '/category3.jpg',
+  //     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 25L50 35L70 25V75H30V25Z' stroke='%237C3AED' stroke-width='4' fill='none'/%3E%3Cpath d='M40 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Cpath d='M50 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Cpath d='M60 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Ccircle cx='50' cy='55' r='5' fill='%237C3AED' fill-opacity='0.2' stroke='%237C3AED'/%3E%3Ccircle cx='50' cy='65' r='7' fill='%237C3AED' fill-opacity='0.2' stroke='%237C3AED'/%3E%3C/svg%3E",
+  //   },
+  //   {
+  //     name: 'Accessories',
+  //     image: '/category4.jpg',
+  //     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='35' cy='35' r='10' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Ccircle cx='65' cy='35' r='10' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Cpath d='M35 45V65C35 70 40 75 50 75C60 75 65 70 65 65V45' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Ccircle cx='40' cy='30' r='3' fill='%23059669'/%3E%3Ccircle cx='60' cy='30' r='3' fill='%23059669'/%3E%3C/svg%3E",
+  //   },
+  // ];
+
   const categories = [
     {
       name: 'Festive Collection',
-      image: '/category1.jpg',
-      icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 15L55 35H75L60 45L65 65L50 55L35 65L40 45L25 35H45L50 15Z' fill='%23C53030'/%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23F59E0B' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='50' r='30' stroke='%23F59E0B' stroke-width='2' fill='none'/%3E%3C/svg%3E",
+      image: '/laddu_gopal_ji_1.jpeg',
+      icon: '🎉',
     },
     {
       name: 'Daily Wear',
-      image: '/category2.jpg',
-      icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 30L50 15L70 30V70H30V30Z' stroke='%234F46E5' stroke-width='4' fill='none'/%3E%3Crect x='35' y='40' width='30' height='20' rx='2' fill='%234F46E5' fill-opacity='0.2'/%3E%3Cline x1='40' y1='50' x2='60' y2='50' stroke='%234F46E5' stroke-width='2'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%234F46E5' stroke-width='2'/%3E%3C/svg%3E",
+      image: '/laddu_gopal_ji_2.jpeg',
+      icon: '👗',
     },
     {
       name: 'Premium Dresses',
-      image: '/category3.jpg',
-      icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 25L50 35L70 25V75H30V25Z' stroke='%237C3AED' stroke-width='4' fill='none'/%3E%3Cpath d='M40 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Cpath d='M50 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Cpath d='M60 35V45' stroke='%237C3AED' stroke-width='2'/%3E%3Ccircle cx='50' cy='55' r='5' fill='%237C3AED' fill-opacity='0.2' stroke='%237C3AED'/%3E%3Ccircle cx='50' cy='65' r='7' fill='%237C3AED' fill-opacity='0.2' stroke='%237C3AED'/%3E%3C/svg%3E",
+      image: '/laddu_gopal_ji_3.jpeg',
+      icon: '💎',
     },
     {
       name: 'Accessories',
-      image: '/category4.jpg',
-      icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='35' cy='35' r='10' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Ccircle cx='65' cy='35' r='10' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Cpath d='M35 45V65C35 70 40 75 50 75C60 75 65 70 65 65V45' stroke='%23059669' stroke-width='4' fill='none'/%3E%3Ccircle cx='40' cy='30' r='3' fill='%23059669'/%3E%3Ccircle cx='60' cy='30' r='3' fill='%23059669'/%3E%3C/svg%3E",
+      image: '/laddu_gopal_ji_4.jpeg',
+      icon: '👜',
     },
   ];
 
@@ -1372,10 +1395,10 @@ export default function ClientHome({ locale, imageData }: Props) {
               key={index}
               className="group relative bg-white p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-center"
             >
-              {/* <div className="bg-indigo-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-100 transition-colors">
+              <div className="bg-indigo-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-100 transition-colors">
                 {category?.icon}
-              </div> */}
-              <div
+              </div>
+              {/* <div
                 className="bg-indigo-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-100 transition-colors"
                 style={{
                   backgroundImage: `url(${category.icon})`,
@@ -1383,7 +1406,7 @@ export default function ClientHome({ locale, imageData }: Props) {
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
                 }}
-              ></div>
+              ></div> */}
               <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
               <button className="text-indigo-600 font-medium flex items-center justify-center group-hover:underline mx-auto">
                 Explore
